@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Sat 26 Jan 2019 12:21:45 AM CST by Eclipse SUMO netedit Version 1.1.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/root/githubs/sumo-projects/tutorials/quick_start/crossing.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/root/githubs/sumo-projects/tutorials/quick_start/crossing.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="false"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <poly id="poly_0" color="red" fill="0" layer="128.00" shape="-44.150000,131.890000 -30.170000,131.660000 -26.130000,122.330000 -33.900000,114.950000 -43.140000,116.660000"/>
+    <poly id="poly_1" color="red" fill="0" layer="128.00" shape="15.730000,130.950000 23.660000,130.870000 23.030000,114.640000 16.200000,114.640000 15.730000,130.950000"/>
+</additional>
