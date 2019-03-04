@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Sat 26 Jan 2019 12:21:34 AM CST by Eclipse SUMO netedit Version 1.1.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/root/githubs/sumo-projects/tutorials/quick_start/crossing.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/root/githubs/sumo-projects/tutorials/quick_start/crossing.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="false"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="busStop_-gneE0_0_0" lane="-gneE0_0" startPos="40" endPos="50"/>
+    <busStop id="busStop_-gneE0_1_1" lane="-gneE0_1" startPos="45.35" endPos="55.35"/>
+    <busStop id="busStop_-gneE0_1_2" lane="-gneE0_1" startPos="30.02" endPos="40.02"/>
+    <e1Detector id="e1Detector_-gneE1_0_0" lane="-gneE1_0" pos="15.11" freq="900.00" file="e1Detector_-gneE1_0_0.xml"/>
+    <e3Detector id="e3Detector_0" pos="41.66,121.78" freq="900.00" file="e3Detector_0.xml">
+        <detEntry lane="gneE1_0" pos="68.00"/>
+        <detExit lane="gneE1_0" pos="50.52"/>
+    </e3Detector>
+    <calibrator id="calibrator_-gneE3_0" edge="-gneE3" pos="0.00"/>
+    <taz id="taz_0" shape="-74.70,80.91 -45.78,80.00 -37.76,64.11 -50.17,51.54 -79.99,52.60 -84.38,69.10 -74.70,80.91" color="blue"/>
+</additional>
