@@ -90,7 +90,7 @@ class FlowHelper(object):
         flow_dict = {'id': flow_id, 'type': vehicle_type,
                      'from': from_edge, 'to': to_edge,
                      'begin': str(int(begin)), 'end': str(int(end)),
-                     'vehsPerHours': str(int(vehsPerHour)), 'departLane': depart_lane}
+                     'vehsPerHour': str(int(vehsPerHour)), 'departLane': depart_lane}
         node = XMLHelper.create_node("flow", flow_dict)
         XMLHelper.add_child_node(self.tree.getroot(), node)
 
@@ -104,6 +104,6 @@ class FlowHelper(object):
             flow_dict = {'id': id_prefix + str(i), 'type': vehicle_type,
                          'from': from_edge, 'to': to_edge,
                          'begin': str(int(time_slots[i])), 'end': str(int(time_slots[i+1])),
-                         'vehsPerHours': str(int(vol)), 'departLane': "random"}
+                         'vehsPerHour': str(int(vol)), 'departLane': "random"}
             node = XMLHelper.create_node("flow", flow_dict)
             XMLHelper.add_child_node(self.tree.getroot(), node)

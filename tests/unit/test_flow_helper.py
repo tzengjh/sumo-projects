@@ -19,11 +19,11 @@ class TestFlowHelper(unittest.TestCase):
         flow_dict_list = [{'id': 'flow_1', 'type': 'Car',
                            'from': '1i', 'to': '2o',
                            'begin': '20', 'end': '100',
-                           'vehsPerHours': '100', 'departLane': 'random'},
+                           'vehsPerHour': '100', 'departLane': 'random'},
                           {'id': 'flow_2', 'type': 'Car',
                            'from': '2i', 'to': '1o',
                            'begin': '0', 'end': '100',
-                           'vehsPerHours': '100', 'departLane': 'random'}]
+                           'vehsPerHour': '100', 'departLane': 'random'}]
         flows = FlowHelper(self.routes_file)
         flows.remove_all()
         flows.add_flow_by_dict(flow_dict_list)

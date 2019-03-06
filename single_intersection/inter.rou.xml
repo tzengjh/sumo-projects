@@ -1,0 +1,5 @@
+<routes>
+<vType accel="1.0" decel="5.0" id="Car" length="3.0" maxSpeed="100.0" sigma="0.0"/>
+<route id="route_inter" edges="51i 1i 2o 52o"/>
+<flow id="flow_inter" type="Car" from="51i" to="52o" begin="0" end="360" vehsPerHour="100" departLane="random"/>
+</routes>
