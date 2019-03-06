@@ -1,0 +1,9 @@
+<routes>
+<vType accel="1.0" decel="5.0" id="Car" length="2.0" maxSpeed="100.0" sigma="0.0"/>
+<route id="route0" edges="1to2 out"/>
+<flow id="flow0" type="Car" from="1to2" to="out" begin="0" end="100" vehsPerHours="100" departLane="random"/>
+<vehicle depart="1" id="veh0" route="route0" type="Car"/>
+<vehicle depart="2" id="veh1" route="route0" type="Car"/>
+<flow id="flow1" type="Car" from="1to2" to="out" begin="0" end="100" vehsPerHours="100" departLane="random"/>
+<flow id="flow2" type="Car" from="1to2" to="out" begin="0" end="100" vehsPerHours="100" departLane="random"/>
+</routes>
