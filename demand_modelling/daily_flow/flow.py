@@ -1,6 +1,7 @@
 """The module for generating .xml format files of traffic flow definition,
 refer to Aven's blog(http://www.itstech.club/)."""
-
+from __future__ import division
+from __future__ import unicode_literals
 import os
 import numpy as np
 
