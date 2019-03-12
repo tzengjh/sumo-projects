@@ -75,6 +75,7 @@ class FlowHelper(object):
     def remove_all(self):
         """Remove all of the flow definition."""
         XMLHelper.del_node(self.tree.getroot(), "flow")
+        XMLHelper.del_node(self.tree.getroot(), "vehicle")
 
     def write_xml(self, output_file):
         """Keep the begin time increasing, and write to the .rou.xml."""
@@ -91,7 +92,8 @@ class FlowHelper(object):
         flow_dict = {'id': flow_id, 'type': vehicle_type,
                      'from': from_edge, 'to': to_edge,
                      'begin': str(int(begin)), 'end': str(int(end)),
-                     'vehsPerHour': str(int(vehsPerHour)), 'departLane': depart_lane}
+                     'vehsPerHour': str(int(vehsPerHour)), 'departLane': depart_lane,
+                     'departSpeed': 'random'}
         node = XMLHelper.create_node("flow", flow_dict)
         XMLHelper.add_child_node(self.tree.getroot(), node)
 
@@ -105,6 +107,22 @@ class FlowHelper(object):
             flow_dict = {'id': id_prefix + str(i), 'type': vehicle_type,
                          'from': from_edge, 'to': to_edge,
                          'begin': str(int(time_slots[i])), 'end': str(int(time_slots[i+1])),
-                         'vehsPerHour': str(int(vol)), 'departLane': "random"}
+                         'vehsPerHour': str(int(vol)), 'departLane': "random",
+                         'departSpeed': 'random'}
+            node = XMLHelper.create_node("flow", flow_dict)
+            XMLHelper.add_child_node(self.tree.getroot(), node)
+
+    def add_linear_flow(self, id_prefix, vehicle_type, from_edge, to_edge, begin, end, n_slots,
+                        begin_volume, end_volume):
+        """Add linear flow"""
+        time_slots = np.linspace(begin, end, n_slots + 1)
+        add_volume = (end_volume - begin_volume) / (2 * n_slots)
+        for i in range(n_slots):
+            vol = begin_volume + (2 * i + 1) * add_volume
+            flow_dict = {'id': id_prefix + str(i), 'type': vehicle_type,
+                         'from': from_edge, 'to': to_edge,
+                         'begin': str(int(time_slots[i])), 'end': str(int(time_slots[i+1])),
+                         'vehsPerHour': str(int(vol)), 'departLane': 'random',
+                         'departSpeed': 'random'}
             node = XMLHelper.create_node("flow", flow_dict)
             XMLHelper.add_child_node(self.tree.getroot(), node)

@@ -40,3 +40,9 @@ class TestFlowHelper(unittest.TestCase):
         flows.remove_all()
         flows.add_sin_flow('flow_add', 'Car', '1i', '2o', 0, 3600, 20, min_volume=100, max_volume=1000)
         flows.write_xml(self.output_file)
+
+    def test_add_linear_flow(self):
+        flows = FlowHelper(self.routes_file)
+        flows.remove_all()
+        flows.add_linear_flow('flow_linear', 'Car', '1i', '2o', 0, 1800, 10, begin_volume=800, end_volume=200)
+        flows.write_xml(self.output_file)
